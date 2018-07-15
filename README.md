@@ -1,6 +1,6 @@
 # Darknet YOLO v3 Sample
 
-Some instructions and an example of using the nice/fast ML program `darknet` for object detection with YOLO v3.
+Some instructions and an example of using the nice/fast neural network framework, `darknet`, for object detection with YOLO v3 to make a tiny model (nice for mobile etc.).
 
 **WIP** and blog post coming soon.
 
@@ -34,8 +34,6 @@ class_id = 1, name = no_helmet,          ap = 31.48 %
 ## Setup
 
 ### Windows Instructions for Training with Darknet (GPU version)
-
-> TIP:  when moving any files from Windows to macOS, check for proper newlines (e.g. lack of `^M` characters in text files)
 
 #### My System
 * Windows 10
@@ -87,6 +85,8 @@ Setup - see https://github.com/AlexeyAB/darknet for details and download links
   
 ### macOS Instructions for Training with Darknet (CPU)
 
+> TIP:  when moving any files from Windows to macOS, check for proper newlines (e.g. lack of `^M` characters in text files)
+
 #### My System
 * macOS High Sierra 10.13.5
 * MacBook Pro (15-inch, 2017)
@@ -120,3 +120,12 @@ Setup - see https://github.com/AlexeyAB/darknet for details and download links
         ./darknet detector train experiment\minifig.data experiment\yolov3-tiny.cfg experiment\yolov3-tiny.conv.15
     
     4.4 The final trained model with be in the `backup` folder.
+    
+## What is YOLO and Object Detection
+
+Great Series of Videos on Object Detection and YOLO (Convolutional Neural Network (CNNs) by Andrew Ng [Full Course]):
+  * Object Detection is CNN20-31, with YOLO being CNN31 ([Videos](https://www.youtube.com/watch?v=Z91YCMvxdo0&list=PLBAGcD3siRDjBU8sKRk0zX9pMz9qeVxud))
+
+Great articles here:
+  * Official fun YOLOv3 [Paper](https://pjreddie.com/media/files/papers/YOLOv3.pdf)
+  * Great post from an ML expert and iOS App builder, Matthijs Hollemans [Blog](http://machinethink.net/blog/object-detection-with-yolo/)
