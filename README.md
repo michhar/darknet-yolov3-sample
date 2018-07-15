@@ -14,6 +14,8 @@ The training data was a set of 175 Lego minifigs with various hats and helmets. 
 2.  Install and build `darknet` (see [Setup](#setup)) and https://pjreddie.com/darknet/install/
 3.  On Windows place the custom `experiment` folder into the build.... x64 folder or on MacOS place it in the base of the folder structure of the `darknet` repo to be accessed by `darknet.exe` or `darknet`, respectively.
 4.  Modify the `yolov3-tiny.cfg` to be either in "training" mode or "testing" mode.  See file and link here for how to.  Also, note, when changing the number of classes from 2, the `[yolo]` layers' classes parameter and some of the filters in convolutional layers will need updating and those detailed instructions can be found at https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects.  Finally, for **transfer learning** add a `stopbackward=1` to freeze weights above (to the last conv layer or the first dense layer is general practice)
+  * For transfer learning use the `yolov3-tiny-frozen.cfg` (larger learning rate, last 2 layers only)
+  * Then, using the model from transfer learning phase fine tune with the `yolov3-tiny.cfg` (smaller learning rate, whole network) - make sure it's setup for "training" in config file
 
 ## Sample results
 
