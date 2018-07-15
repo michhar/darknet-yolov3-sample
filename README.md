@@ -4,7 +4,7 @@ Some instructions and an example of using the nice/fast ML program `darknet` for
 
 **WIP** and blog post coming soon.
 
-The training data was a set of 175 Lego minifigs with various hats and helmets.  One test image is shown here:
+The training data was a set of 175 Lego minifig images with various hats and helmets.  One test image is shown here:
 
 <img src="assets/predictions.jpg" alt="lego minifig with helmet" width="40%" align="center">
 
