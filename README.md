@@ -4,11 +4,16 @@ Some instructions and an example of using the nice/fast ML program `darknet` for
 
 **WIP** and blog post coming soon.
 
+The training data was a set of 175 Lego minifigs with various hats and helmets.  One test image is shown here:
+
+<img src="assets/predictions.jpg" alt="lego minifig with helmet" width="40%" align="center">
+
 ## How to use this repository
 
 1.  Clone the files from this repo as examples of a custom `darknet` sample (to be added to install repo)
 2.  Install and build `darknet` (see [Setup](#setup)) and https://pjreddie.com/darknet/install/
 3.  On Windows place the custom `experiment` folder into the build.... x64 folder or on MacOS place it in the base of the folder structure of the `darknet` repo to be accessed by `darknet.exe` or `darknet`, respectively.
+4.  Modify the `yolov3-tiny.cfg` to be either in "training" mode or "testing" mode.  See file and link here for how to.  Also, note, when changing the number of classes from 2, the `[yolo]` layers' classes parameter and some of the filters in convolutional layers will need updating and those detailed instructions can be found at https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects.  Finally, for **transfer learning** add a `stopbackward=1` to freeze weights above (to the last conv layer or the first dense layer is general practice)
 
 ## Sample results
 
