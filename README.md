@@ -74,6 +74,10 @@ Setup - see https://github.com/AlexeyAB/darknet for details and download links
       
     4.4 The final trained model with be in the `backup` folder.  I recommend giving it a good, unique name.
   
+5.  Test with:
+    
+    `darknet.exe detector test experiment\minifig.data experiment\yolov3-tiny.cfg backup\yolov3-tiny_10000.weights data\test\IMG_4658.JPG`
+  
 ### macOS Instructions for Training with Darknet (CPU)
 
 #### My System
