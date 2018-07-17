@@ -73,11 +73,15 @@ Setup - see https://github.com/AlexeyAB/darknet for details and download links
  
     4.2 Note, put your `minifig.data` (directs `darknet` on where to go for information and saving models) file in the `experiment` folder and use full paths to the `train.txt` and `minifig.names` (a file to indicate classes)
     
-    4.3 Run with:
+    4.3 For the transfer learning stage, run with:
   
-      `darknet.exe detector train experiment\minifig.data experiment\yolov3-tiny.cfg experiment\yolov3-tiny.conv.15`
+      `darknet.exe detector train experiment\minifig.data experiment\yolov3-tiny-frozen.cfg experiment\yolov3-tiny.conv.15`
       
-    4.4 The final trained model with be in the `backup` folder.  I recommend giving it a good, unique name.
+      For the fine-tuning stage, run with:
+      
+      `darknet.exe detector train experiment\minifig.data experiment\yolov3-tiny.cfg backup\<weights file from transfer learning stage>`
+      
+    4.4 The final trained model with be in the `backup` folder.  I recommend giving it a good, unique name (maybe indicate params in name).
   
 5.  Test with:
     
