@@ -69,7 +69,7 @@ Setup - see https://github.com/AlexeyAB/darknet for details and download links
 
     4.1 May need to
     
-        4.1.1 Place certain cuDNN libs into v9.1 CUDA directory (e.g. `cudnn64_7.dll` found in search after a cuDNN intall into `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin`)
+       4.1.1 Place certain cuDNN libs into v9.1 CUDA directory (e.g. `cudnn64_7.dll` found in search after a cuDNN intall into `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin`)
  
     4.2 Note, put your `minifig.data` (directs `darknet` on where to go for information and saving models) file in the `experiment` folder and use full paths to the `train.txt` and `minifig.names` (a file to indicate classes)
     
@@ -85,7 +85,7 @@ Setup - see https://github.com/AlexeyAB/darknet for details and download links
   
 5.  Test with:
     
-    `darknet.exe detector test experiment\minifig.data experiment\yolov3-tiny.cfg backup\yolov3-tiny_10000.weights data\test\IMG_4658.JPG`
+    `darknet.exe detector test experiment\minifig.data experiment\yolov3-tiny.cfg backup\<weights file from fine-tuning stage> data\test\IMG_4658.JPG`
   
 ### macOS Instructions for Training with Darknet (CPU)
 
@@ -119,9 +119,7 @@ Setup - see https://github.com/AlexeyAB/darknet for details and download links
 
     4.2 If doing transfer learning, place `stopbackward=1` in the `yolov3-tiny.cfg`
 
-    4.3 Run with:
-
-        ./darknet detector train experiment\minifig.data experiment\yolov3-tiny.cfg experiment\yolov3-tiny.conv.15
+    4.3 Run as above for Windows instructions.
     
     4.4 The final trained model with be in the `backup` folder.
     
